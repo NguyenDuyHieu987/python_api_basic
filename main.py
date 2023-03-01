@@ -1,10 +1,8 @@
 from flask import *
-import pymongo
-from waitress import serve
 from gevent.pywsgi import WSGIServer
-from bson import json_util, ObjectId
-import json
 
+
+app = Flask(__name__)
 
 @app.route("/image/<name>", methods=["GET"])
 def img_route(name):
